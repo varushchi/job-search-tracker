@@ -1,0 +1,13 @@
+.add-form{
+  margin-top: 50px;
+  width: 40%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  & > input{
+    height: 20px;
+    padding-left: 10px;
+  }
+}

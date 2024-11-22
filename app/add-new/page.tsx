@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import './globals.css'
 
 export default function AddNew() {
 
@@ -38,13 +39,13 @@ export default function AddNew() {
   }
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    <form onSubmit={(e) => handleSubmit(e)} className="add-form">
       <input placeholder="Компания" value={inputValue.company} onChange={(e) => setInputValue({...inputValue, company: e.target.value})}/>
       <input placeholder="Вакансия" value={inputValue.vacancy} onChange={(e) => setInputValue({...inputValue, vacancy: e.target.value})}/>
       <input placeholder="Зарплатная вилка" value={inputValue.salary} onChange={(e) => setInputValue({...inputValue, salary: e.target.value})}/>
       <input placeholder="Статус отклика" value={inputValue.status} onChange={(e) => setInputValue({...inputValue, status: e.target.value})}/>
       <input placeholder="Заметка" value={inputValue.note} onChange={(e) => setInputValue({...inputValue, note: e.target.value})}/>
-      <button type="submit">Add</button>
+      <button type="submit">Добавить</button>
     </form>
   )
 }

@@ -15,6 +15,6 @@ export default function DeleteBtn({id} : {id: string}) {
   }
 
   return (
-    <button onClick={deleteVacancy}>Delete</button>
+    <button onClick={deleteVacancy}>Удалить</button>
   )
 }

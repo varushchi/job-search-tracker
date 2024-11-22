@@ -18,7 +18,7 @@ export default async function Edit({params}: {params: {id: string}}) {
     try{
       const res = await fetch(`http://localhost:3000/api/vacancy/${id}`, {cache: 'no-store'})
       if (!res.ok){
-        throw new Error('error while getting vacancy')  
+        throw new Error('error while getting vacancy')
       }
       return res.json()
     } catch(error){

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import DeleteBtn from "./DeleteBtn";
+import './Vacancy.css'
 
 const getVacancies = async () => {
   try{
@@ -34,7 +35,7 @@ export default async function Vacancy() {
         <p>{elem.salary}</p>
         <p>{elem.status}</p>
         <p>{elem?.note}</p>
-        <Link href={`/edit/${elem._id}`}>Edit</Link>
+        <Link href={`/edit/${elem._id}`}>Редактировать</Link>
         <DeleteBtn id={elem._id} />
       </div>
     )
@@ -42,6 +43,15 @@ export default async function Vacancy() {
 
   return (
     <div className="vacancies">
+      <div className="headers">
+        <p>Компания</p>
+        <p>Вакансия</p>
+        <p>Зарплатная вилка</p>
+        <p>Статус отклика</p>
+        <p>Заметка</p>
+        <p>Редактировать</p>
+        <p>Удалить</p>
+      </div>
       {vacancyElem}
     </div>
   )

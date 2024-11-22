@@ -4,8 +4,6 @@ import Vacancy from "@/components/Vacancy";
 
 export default function Home() {
   return (
-    <div>
       <Vacancy />
-    </div>
   );
 }

@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 
+import './EditForm.css'
+
 interface VacancyInterface{
   _id: string
   company: string
@@ -56,13 +58,13 @@ export default function EditForm(props: VacancyInterface) {
   }
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
-      <input placeholder="Компания" value={inputValue.company} onChange={(e) => setInputValue({...inputValue, company: e.target.value})}/>
+    <form onSubmit={(e) => handleSubmit(e)} className="edit-form">
+      <input placeholder="Компания" id="company" value={inputValue.company} onChange={(e) => setInputValue({...inputValue, company: e.target.value})}/>
       <input placeholder="Вакансия" value={inputValue.vacancy} onChange={(e) => setInputValue({...inputValue, vacancy: e.target.value})}/>
       <input placeholder="Зарплатная вилка" value={inputValue.salary} onChange={(e) => setInputValue({...inputValue, salary: e.target.value})}/>
       <input placeholder="Статус отклика" value={inputValue.status} onChange={(e) => setInputValue({...inputValue, status: e.target.value})}/>
       <input placeholder="Заметка" value={inputValue.note} onChange={(e) => setInputValue({...inputValue, note: e.target.value})}/>
-      <button type="submit">Edit</button>
+      <button type="submit">Сохранить</button>
     </form>
   )
 }

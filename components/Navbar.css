@@ -1,0 +1,15 @@
+nav{
+  width: 80%;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+
+  & > a{
+    height: 80%;
+    width: fit-content;
+    border: 1px solid gray;
+    font-size: 2rem;
+  }
+}
