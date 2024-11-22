@@ -1,4 +1,4 @@
-.vacancies{
+.vacancies {
   margin-top: 50px;
   width: 90%;
   margin-inline: auto;
@@ -7,14 +7,15 @@
   row-gap: 5px;
 }
 
-.headers{
+.headers {
   font-weight: bold;
   font-size: 1.1rem;
 }
 
 .headers,
-.vacancy{
+.vacancy {
   width: 100%;
+  min-width: 1000px;
   display: grid;
   grid-template-columns: 20% 20% 15% 10% 15% 10% 10%;
   grid-template-rows: auto;
